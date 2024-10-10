@@ -1,0 +1,81 @@
+.booking-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .booking-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .booking-image {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    border-radius: 10px;
+  }
+  
+  .booking-info {
+    margin-top: 10px;
+  }
+  
+  .booking-price {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .ticket-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .ticket-btn {
+    padding: 10px;
+    font-size: 1.5rem;
+    width: 40px;
+    cursor: pointer;
+  }
+  
+  .ticket-count {
+    margin: 0 15px;
+    font-size: 1.5rem;
+  }
+  
+  .total-price {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .booking-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .confirm-button, .cancel-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .confirm-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .cancel-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  

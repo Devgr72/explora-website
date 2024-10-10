@@ -1,0 +1,66 @@
+.dream-trip-section {
+    text-align: center;
+    padding: 50px 20px;
+   
+  }
+  .dream-trip-section h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .dream-trip-section p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: #666;
+  }
+  
+  .dream-trip-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .dream-service-card {
+    background-color: #fff;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .dream-service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .dream-service-card h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 15px 0;
+  }
+  
+  .dream-service-card p {
+    padding: 0 15px;
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .more-services {
+    margin-top: 30px;
+  }
+  
+  .more-services button {
+    background-color: #267dda;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .more-services button:hover {
+    background-color: #0056b3;
+  }
+  

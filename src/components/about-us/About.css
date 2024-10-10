@@ -1,0 +1,84 @@
+
+.about-us {
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 20px;
+    background-color: #f23708;
+}
+
+.container-about {
+    max-width: 1200px;
+    width: 1100px;
+    
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #12f4e8;
+    border-radius: 8px;
+    box-shadow: 0 0 20px ;
+}
+.about-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.about-header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+.about-header p {
+    font-size: 18px;
+    color: #777;
+}
+.our-mission, .our-values, .our-story, .contact-us {
+    margin-bottom: 40px;
+}
+.meet-the-team{
+    margin-bottom: 40px;
+    text-align: center;
+}
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+.team-members {
+    
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.team-member {
+    text-align: center;
+    max-width: 200px;
+}
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.contact-us p {
+    font-size: 16px;
+}
+
+.contact-us a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-us a:hover {
+    text-decoration: underline;
+}
+.submit11{
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgb(118, 243, 118);
+    margin-left: 450px;
+}
+.submit11:hover{
+    background-color: green;
+    width: 120px;
+    height: 45px;
+}
