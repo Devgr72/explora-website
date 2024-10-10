@@ -1,65 +1,110 @@
-
+/* About Us Page Styling */
 .about-us {
     font-family: Arial, sans-serif;
     color: #333;
     padding: 20px;
-    background-color: #f23708;
+    background-color: #f8f8f8; /* Light gray background for better readability */
 }
 
 .container-about {
-    max-width: 1200px;
-    width: 1100px;
-    
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 20px;
-    background-color: #12f4e8;
-    border-radius: 8px;
-    box-shadow: 0 0 20px ;
+    padding: 30px;
+    background-color: #ffffff; /* White background inside */
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Softer shadow */
 }
+
 .about-header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
+
 .about-header h1 {
-    font-size: 36px;
+    font-size: 42px; /* Increased size for better visual hierarchy */
     margin-bottom: 10px;
+    color: #f23708; /* Vibrant color for title */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
+
 .about-header p {
     font-size: 18px;
     color: #777;
+    max-width: 700px;
+    margin: 0 auto;
 }
+
 .our-mission, .our-values, .our-story, .contact-us {
     margin-bottom: 40px;
-}
-.meet-the-team{
-    margin-bottom: 40px;
     text-align: center;
 }
+
 h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #007bff; /* Primary color for section headings */
 }
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
 ul {
     list-style: disc;
-    margin-left: 20px;
+    margin-left: 40px;
+    color: #555;
 }
+
+.meet-the-team {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
 .team-members {
-    
     display: flex;
-    gap: 20px;
+    gap: 30px;
     flex-wrap: wrap;
+    justify-content: center;
 }
+
 .team-member {
     text-align: center;
-    max-width: 200px;
+    flex: 1 1 calc(25% - 30px); /* Flexbox for responsive columns */
+    margin-bottom: 30px;
 }
+
 .team-member img {
-    width: 100%;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
+    object-fit: cover;
     margin-bottom: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow around the image */
+    transition: transform 0.3s ease;
 }
-.contact-us p {
+
+.team-member img:hover {
+    transform: scale(1.1); /* Interactive hover effect on images */
+}
+
+.team-member h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.team-member p {
     font-size: 16px;
+    color: #777;
+}
+
+.contact-us p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
 }
 
 .contact-us a {
@@ -70,15 +115,61 @@ ul {
 .contact-us a:hover {
     text-decoration: underline;
 }
-.submit11{
-    width: 100px;
-    height: 40px;
-    border-radius: 10px;
-    background-color: rgb(118, 243, 118);
-    margin-left: 450px;
-}
-.submit11:hover{
-    background-color: green;
-    width: 120px;
+
+/* Submit Button Styling */
+.submit11 {
+    width: 150px;
     height: 45px;
+    border-radius: 5px;
+    background-color: #28a745; /* Bootstrap green color */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+    display: block;
+}
+
+.submit11:hover {
+    background-color: #218838;
+    width: 160px;
+    height: 50px; /* Slight size increase on hover */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container-about {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .about-header h1 {
+        font-size: 32px;
+    }
+
+    .team-member {
+        flex: 1 1 calc(50% - 20px); /* 2 columns on smaller screens */
+    }
+
+    .team-member img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .team-member {
+        flex: 1 1 100%; /* Full width on small screens */
+    }
+
+    .team-member img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .submit11 {
+        width: 130px;
+        height: 40px;
+    }
 }
