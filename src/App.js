@@ -9,6 +9,8 @@ import Service from './components/services/Service';
 import LoginPage from './components/Login-signup/LoginPage';
 import ForgetPass from './components/Login-signup/ForgetPass';
 import Bookservice from './components/service-booking/Bookservice';
+import VerifyOtpPage from './components/Login-signup/verifyotpPage';
+
 function App() {
   return (
     <BrowserRouter>
@@ -21,6 +23,7 @@ function App() {
     <Route path="/bookservice" element={<Bookservice/>} />
     <Route path='/login' element={<Login/>}/>
     <Route path='/forget' element={<ForgetPass/>}/>
+    <Route path='/verify-otp' element={<VerifyOtpPage/>}/>
      </Routes>
     </div>
     </BrowserRouter>

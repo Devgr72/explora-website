@@ -106,20 +106,22 @@
    
 
 }
-.btn1{
+.btn1 {
+    position: absolute;
     
-    background-color: #fff;
-    border: none;
-    margin-top: -210px;
-    font-size: 40px;
-    margin-left: 390px;
-    background: transparent;
-  
-
-
+   
+    background-color: transparent;
+    border: none; 
+    font-size: 30px; 
+    cursor: pointer; 
+    color: black; 
+    transition: transform 0.2s ease-in-out; 
 }
-.btn1:hover{
-    font-size: 45px;
+
+
+.btn1:hover {
+    transform: scale(1.1);
+    color: red; 
 }
 .input input{
     padding: 10px;
@@ -259,21 +261,89 @@ margin-left: 110px;
     text-decoration: underline; /* Underline on hover */
 }
 
-/* Responsive Styles */
-@media screen and (max-width: 480px) {
+
+
+@media (max-width: 768px) {
+    /* Mobile and Tablet */
     .container {
-        margin-top: 160px;
-        padding: 15px; /* Less padding on smaller screens */
+      padding: 15px;
+      max-width: 55%;
     }
-
-    h2 {
-        font-size: 24px; /* Smaller font size for heading */
+  
+    .header .login-video1 video  {
+      width: 80%;
+      height: auto;
+      align-items: center;
+      justify-content: center;
     }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="password"],
-    button {
-        font-size: 14px; /* Smaller font size for inputs and buttons */
+  .header video-h1{
+    margin-top: 60px;
+  }
+    .submit-container {
+      flex-direction: row;
     }
-}
+    .btn1 {
+        font-size: 28px; 
+        top: 15px; 
+        right: 15px;
+    }
+  
+    .submit1, .submit {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .btn1 {
+      font-size: 40px;
+      margin-left: 40px;
+      margin-top: 20px;
+    }
+  
+    input[type='email'], input[type='password'] {
+      padding: 8px;
+    }
+   
+  }
+  
+  @media (max-width: 480px) {
+    /* Small Mobile */
+    .container {
+      padding: 10px;
+      max-width: 100%;
+    }
+    .btn1 {
+        font-size: 30px;
+        top: 110px; 
+       
+    }
+    .btn1:hover{
+        font-size: 40px;
+color:red;
+    }
+  
+    .header .login-video1 video {
+      width: 90%;
+    }
+  
+    input[type='email'], input[type='password'] {
+      font-size: 14px;
+    }
+  
+    .submit, .submit1 {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .btn1 {
+      font-size: 18px;
+    }
+  
+    .login-error1 {
+      font-size: 10px;
+    }
+  
+    .forget-pass span {
+      font-size: 14px;
+    }
+  }
+  

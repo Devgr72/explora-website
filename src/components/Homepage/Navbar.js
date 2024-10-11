@@ -44,23 +44,21 @@ function Navbar() {
           ) : (
             <>
               <li><button className="login-btn"><Link to="/loginpage">Login</Link></button></li>
-              <li><button className="login-btn"><Link to="/signup">Signup</Link></button></li>
+              <li><button className="login-btn"><Link to="/login">Signup</Link></button></li>
             </>
           )}
         </ul>
 
-        {/* Hamburger Menu (visible on mobile screens) */}
+        
         <div className="hamburger" onClick={toggleSidebar}>
           &#9776;
         </div>
       </nav>
 
-      {/* Sidebar (shown on mobile screens when hamburger menu is clicked) */}
+    
       <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
-        {/* Close Button */}
+       
         <span className="sidebar-close" onClick={toggleSidebar}>&times;</span>
-
-        {/* Sidebar Links */}
         <ul>
           <li><Link to="/" onClick={toggleSidebar}>Home</Link></li>
           <li><Link to="/aboutus" onClick={toggleSidebar}>About</Link></li>

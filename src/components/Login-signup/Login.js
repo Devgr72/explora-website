@@ -66,14 +66,25 @@ function Login() {
   };
   
 
-  const handleClick = async() => {
+  const handleClick = async () => {
     setSubmitted(true);
     if (validateFields()) {
-      const data = { name, email, pass }
-      axios.post('http://localhost:8000/login', data)
-      navigate('/loginpage');
+      const data = { name, email, pass };
+      
+      try {
+        axios.post('http://localhost:8000/sent-otp',{email});
+        const response = await axios.post('http://localhost:8000/login', data);
+        if (response.status === 200) {
+      
+          navigate('/verify-otp',{state:{mail:email}});
+        }
+      } catch (error) {
+        console.error('Error during sign-up', error);
+       
+      }
     }
   };
+  
 
   return (
     <div className='top'>
@@ -116,7 +127,9 @@ function Login() {
         </div>
 
         <div className='submit-container'>
+        <Link to='/verify-otp'>
           <button className='submit' onClick={handleClick}>Sign Up</button>
+          </Link>
           <Link to='/loginpage'>
             <button className='submit1 grey'>Login</button>
           </Link>
