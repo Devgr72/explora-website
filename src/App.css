@@ -4,68 +4,100 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 80px; /* Reduced height */
+  height: 80px;
   background-color: white;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  z-index: 1000;
-  box-shadow: none; /* Remove the box-shadow */
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
   padding: 0 20px;
+ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+
 }
 
-/* Logo section */
+/* Logo */
 .login-video {
   display: flex;
-  max-width: 100px; /* Adjust size */
-  max-height: 50px;
-  justify-content: flex-start;
+  max-width: 100px;
+  max-height: 100px;
+
   align-items: center;
-  margin-left: 10px;
 }
 
-/* Hamburger Menu */
+.img-h1 {
+  color: red;
+  font-size: 25px;
+  margin-top: 10px;
+
+}
+.logo{
+  margin-left: 20px;
+  height: 80px;
+}
+
+/* Navigation Links (visible on larger screens) */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  
+}
+
+
+
+
+.logout-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Hamburger Menu (visible on mobile screens) */
 .hamburger {
   font-size: 30px;
   cursor: pointer;
-  margin-left: auto;
-  display: block;
+  display: none;
 }
 
-/* Sidebar (now from right) */
+/* Sidebar (for mobile screens) */
 .sidebar {
   position: fixed;
   top: 0;
-  right: -250px; /* Initially hidden off-screen on the right */
+  right: -250px;
   width: 250px;
   height: 100%;
   background-color: white;
-  box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1); /* Light shadow on left */
+  box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
   z-index: 999;
-  transition: right 0.3s ease; /* Animation for smooth opening */
+  transition: right 0.3s ease;
   padding: 20px;
   display: flex;
   flex-direction: column;
 }
 
 .sidebar.open {
-  right: 0; /* Slide in from the right */
+  right: 0;
 }
 
-/* Sidebar Close Button */
 .sidebar-close {
   align-self: flex-end;
   font-size: 25px;
   cursor: pointer;
-  margin-bottom: 20px; /* Space between X button and links */
+  margin-bottom: 20px;
 }
 
-/* Sidebar Links */
 .sidebar ul {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
   margin: 0;
-  flex-grow: 1;
 }
 
 .sidebar ul li {
@@ -73,22 +105,17 @@
 }
 
 .sidebar ul li a {
-  color: black;
   text-decoration: none;
-  font-size: medium;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  color: black;
+  font-size: 18px;
+  transition: color 0.3s ease;
 }
 
 .sidebar ul li a:hover {
   color: #00008b;
-  background-color: lightgoldenrodyellow;
 }
 
-/* Sidebar Login/Signup Buttons */
-.sidebar-login-signup {
-  margin-top: 20px;
-}
-
+/* Sidebar login/signup */
 .sidebar-login-signup button {
   display: block;
   width: 100%;
@@ -104,31 +131,61 @@
 .sidebar-login-signup button:hover {
   background-color: #0056b3;
 }
-
-/* Responsive Adjustments */
-@media screen and (max-width: 768px) {
-  /* Ensure navbar layout on mobile */
-  .main-nav {
-    height: 60px;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  /* Adjust logo size */
-  .login-video {
-    max-width: 80px;
-    max-height: 40px;
-    margin-left: 10px;
-  }
-
-  /* Banner responsiveness */
-  .banner img {
-    height: auto;
-    width: 100%;
-  }
-}
-
-.img-h1{
-  color:red;
-  font-size: 22px;
+.login-btn{
+  background-color: #8cbcf1;
+  border-radius: 10px;
+  padding: auto;
+  margin:auto;
+  height:43px;
   
+  justify-content: center;
 }
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none; 
+  }
+
+  .hamburger {
+    display: block; 
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .sidebar {
+    display: none;
+  }
+}
+Centered Navigation Links
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center; 
+  gap: 30px; 
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+/* Individual link styling */
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px; /* Add padding inside the links */
+  border-radius: 5px; /* Slight rounded corners */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+.nav-links a:hover {
+  background-color: #00008b; /* Dark blue background on hover */
+  color: white; /* White text on hover */
+}
+

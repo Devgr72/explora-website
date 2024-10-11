@@ -42,7 +42,7 @@ function Footer() {
             <a href="https://facebook.com"><FaFacebookF /></a>
             <a href="https://instagram.com"><FaInstagram /></a>
             <a href="https://twitter.com"><FaTwitter /></a>
-            <a href="https://youtube.com"><FaYoutube /></a>
+            <a href="https://www.youtube.com/@devgaming72"><FaYoutube /></a>
           </div>
         </div>
       </div>

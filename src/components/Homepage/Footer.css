@@ -90,6 +90,14 @@
   
     .footer-section {
       text-align: center;
+      justify-content: center;
+      
+    }
+    .footer-section p{
+      color: #fff;
+    }
+    .social-icons{
+      justify-content: center;
     }
   }
   

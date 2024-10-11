@@ -8,7 +8,7 @@ function Homec1() {
   return (
     <div className="home-container">
             <div className="info-section">
-                <h1 className="info-title">Welcome to Explora</h1>
+                <h1 className="info-title"><u>Welcome to Explora</u></h1>
                 <p className="info-description">
                     Explore the world like never before. Discover new places, connect with people, and enhance your travel experiences with our platform. 
                 </p>

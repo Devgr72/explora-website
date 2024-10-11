@@ -242,3 +242,38 @@ margin-left: 110px;
       opacity: 1;
     }
     }
+
+    /* General Styles for Forms */
+
+
+/* Links */
+.link {
+    text-align: center;
+    display: block; /* Block display for the link */
+    margin-top: 15px; /* Spacing above link */
+    color: #007bff; /* Primary color */
+    text-decoration: none; /* Remove underline */
+}
+
+.link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 480px) {
+    .container {
+        margin-top: 160px;
+        padding: 15px; /* Less padding on smaller screens */
+    }
+
+    h2 {
+        font-size: 24px; /* Smaller font size for heading */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    button {
+        font-size: 14px; /* Smaller font size for inputs and buttons */
+    }
+}
