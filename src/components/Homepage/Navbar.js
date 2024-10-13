@@ -66,7 +66,7 @@ function Navbar() {
           <li><Link to="/booking" onClick={toggleSidebar}>Booking</Link></li>
         </ul>
 
-        {/* Login/Signup Buttons in Sidebar */}
+       
         <div className='sidebar-login-signup'>
           {isLoggedIn ? (
             <>
@@ -75,7 +75,7 @@ function Navbar() {
             </>
           ) : (
             <>
-              <Link to='/signup' onClick={toggleSidebar}>
+              <Link to='/login' onClick={toggleSidebar}>
                 <button className="btn btn-primary">Signup</button>
               </Link>
               <Link to='/loginpage' onClick={toggleSidebar}>
