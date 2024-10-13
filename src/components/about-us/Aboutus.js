@@ -46,13 +46,13 @@ function Aboutus() {
                             <img src={cr7} alt='Team Member 2' />
                             <h3>Cristiano Ronaldo</h3>
                             <p>Travel Consultant</p>
-                            <p>Ronaldo’s extensive travel experience and in-depth knowledge of destinations make her the go-to expert for planning your perfect trip.</p>
+                            <p>Ronaldo’s extensive travel experience and Part-Time Footballer in-depth knowledge of destinations make him go-to expert for planning your perfect trip.</p>
                         </div>
                         <div className='team-member'>
                             <img src={lm10} alt='Team Member 1' />
                             <h3>Messi</h3>
                             <p>Naukar</p>
-                            <p>Messi’s love Jhadu Pocha in his early years just like girls, He is very dumb but he plays football very well.</p>
+                            <p>Messi’s love Jhadu Pocha in his early years , He is very dumb but he plays football very well.</p>
                         </div>
                     </div>
                 </section>

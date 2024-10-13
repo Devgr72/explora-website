@@ -23,6 +23,14 @@ function Bookservice() {
     fetchServiceDetails();
   }, [serviceId]);
 
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://checkout.razorpay.com/v1/checkout.js';
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
+
+  
   const increaseTicketCount = () => {
     setTicketCount((prevCount) => prevCount + 1);
   };
@@ -33,12 +41,42 @@ function Bookservice() {
     }
   };
 
-  const handleConfirmPay = () => {
+  const handleConfirmPay = async () => {
     const price = parseFloat(service.price?.replace('$', '') || 0); 
-    alert(`You have purchased ${ticketCount} ticket(s) for ${service.location} at ${(ticketCount * price).toFixed(2)} USD.`);
-    navigate('/services');
-  };
+    const totalAmount = ticketCount * price * 1; 
+  
+    try {
+     
+      const orderResponse = await axios.post('http://localhost:8000/create-order', { amount: totalAmount });
+  
+      const options = {
+        key: 'rzp_test_Syu8Zea6zXm8yN', 
+        amount: totalAmount, 
+        currency: 'INR',
+        name: service.location,
+        description: `Payment for ${ticketCount} ticket(s)`,
+        order_id: orderResponse.data.id, 
+        handler: function (response) {
+          
+          alert(`Payment successful!.. Payment ID: ${response.razorpay_payment_id}`);
+          navigate('/services');
+        },
+        prefill: {
+          name: "Dev Gr72",
+          email: "devgrover72@gmail.com",
+          contact: "9971381635"
+        },
+        theme: {
+          color: "#007BFF"
+        }
+      };
 
+    const rzp = new window.Razorpay(options);
+    rzp.open();
+  } catch (error) {
+    console.error("Error in payment", error);
+  }
+};
   const handleCancel = () => {
     navigate('/services');
   };

@@ -38,7 +38,7 @@ function Navbar() {
           <li><Link to="/">Home</Link></li>
           <li><Link to="/aboutus">About</Link></li>
           <li><Link to="/services">Services</Link></li>
-          <li><Link to="/booking">Booking</Link></li>
+          <li><Link to="/bookings">Booking</Link></li>
           {isLoggedIn ? (
             <li><button className="logout-btn" onClick={handleLogout}>Logout</button></li>
           ) : (
@@ -63,7 +63,7 @@ function Navbar() {
           <li><Link to="/" onClick={toggleSidebar}>Home</Link></li>
           <li><Link to="/aboutus" onClick={toggleSidebar}>About</Link></li>
           <li><Link to="/services" onClick={toggleSidebar}>Services</Link></li>
-          <li><Link to="/booking" onClick={toggleSidebar}>Booking</Link></li>
+          <li><Link to="/bookings" onClick={toggleSidebar}>Booking</Link></li>
         </ul>
 
        

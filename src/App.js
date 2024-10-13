@@ -10,6 +10,7 @@ import LoginPage from './components/Login-signup/LoginPage';
 import ForgetPass from './components/Login-signup/ForgetPass';
 import Bookservice from './components/service-booking/Bookservice';
 import VerifyOtpPage from './components/Login-signup/verifyotpPage';
+import Bookings from './components/service-booking/Booking';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
     <Route path='/login' element={<Login/>}/>
     <Route path='/forget' element={<ForgetPass/>}/>
     <Route path='/verify-otp' element={<VerifyOtpPage/>}/>
+    <Route path='/bookings' element ={<Bookings/>}/>
      </Routes>
     </div>
     </BrowserRouter>
