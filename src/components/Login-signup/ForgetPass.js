@@ -94,18 +94,7 @@ const handleClick = () => {
                 <source src={backvideo} type="video/mp4" />
             </video>
         <div className='container'>
-            <div className='header'>
-            <div className='login-video1'>
-                <video width="400px" height="120px" autoPlay loop muted>
-            <source src={logo} type="video/mp4" />
-            </video>
             
-              </div>
-              <h1 className='video-h1'>Explora</h1> 
-            </div>
-            <Link to='/'>
-            <button className='btn1'><i class='bx bx-x'></i></button>
-            </Link>
            
             <div className='inputs'>
                 <div className='input'>

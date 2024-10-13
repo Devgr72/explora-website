@@ -80,9 +80,7 @@ function LoginPage() {
         </video>
         <div className='container'>
          
-          <Link to='/'>
-            <button className='btn1'><i class='bx bx-x'></i></button>
-          </Link>
+       
 
           <div className='inputs'>
             <div className='input'>
