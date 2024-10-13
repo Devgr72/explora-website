@@ -111,7 +111,9 @@ function Login() {
         </div>
 
         <div className='submit-container'>
+          <Link to='/verify-otp'>
           <button className='submit' onClick={handleClick}>Sign Up</button>
+          </Link>
           <button className='submit1 grey' onClick={() => navigate('/')}>
             Cancel
           </button>

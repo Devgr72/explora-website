@@ -1,5 +1,7 @@
 import React from 'react';
-
+import myimg from '../Assets/about1.jpg'
+import cr7 from '../Assets/ronaldo.jpeg'
+import lm10 from '../Assets/messi.jpeg'
 import '../about-us/About.css'
 import { Link } from 'react-router-dom';
 function Aboutus() {
@@ -35,22 +37,22 @@ function Aboutus() {
                     <h2>Meet the Team</h2>
                     <div className='team-members'>
                         <div className='team-member'>
-                            <img src='/path/to/team-member1.jpg' alt='Team Member 1' />
+                            <img src={myimg} alt='Team Member 1' />
                             <h3>Dev Grover</h3>
                             <p>Founder & CEO</p>
                             <p>Dev’s love for travel began in his early years, leading him to create a company that shares his passion with the world.</p>
                         </div>
                         <div className='team-member'>
-                            <img src='/path/to/team-member2.jpg' alt='Team Member 2' />
-                            <h3>prabhjot</h3>
+                            <img src={cr7} alt='Team Member 2' />
+                            <h3>Cristiano Ronaldo</h3>
                             <p>Travel Consultant</p>
-                            <p>Prabhjot’s extensive travel experience and in-depth knowledge of destinations make her the go-to expert for planning your perfect trip.</p>
+                            <p>Ronaldo’s extensive travel experience and in-depth knowledge of destinations make her the go-to expert for planning your perfect trip.</p>
                         </div>
                         <div className='team-member'>
-                            <img src='/path/to/team-member1.jpg' alt='Team Member 1' />
-                            <h3>Dev Grover</h3>
-                            <p>Founder & CEO</p>
-                            <p>Dev’s love for travel began in his early years, leading him to create a company that shares his passion with the world.</p>
+                            <img src={lm10} alt='Team Member 1' />
+                            <h3>Messi</h3>
+                            <p>Naukar</p>
+                            <p>Messi’s love Jhadu Pocha in his early years just like girls, He is very dumb but he plays football very well.</p>
                         </div>
                     </div>
                 </section>

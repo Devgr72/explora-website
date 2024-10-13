@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
-
+import myimg from '../Assets/about1.jpg'
 import './Homec3.css'
 function Homec3() {
   const navigate=useNavigate()
@@ -32,7 +32,7 @@ function Homec3() {
       <div className='dream-trip-grid'>
         {services.map(service => (
           <div className='dream-service-card' key={service.id}>
-            <img src={service.img} alt={service.title} />
+            <img src={service.image} alt={service.title} />
             <h3>{service.location}</h3>
             <h3>{service.title}</h3>
             <p>{service.description}</p>

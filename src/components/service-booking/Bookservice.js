@@ -1,40 +1,44 @@
-import React,{useEffect, useState } from 'react';
-import { useParams, useNavigate, useLocation } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
-import './BookService.css'; 
+import './BookService.css';
+
 function Bookservice() {
   const location = useLocation();
   const serviceId = location.state.serviceId;
   const [service, setService] = useState(null);
-  const [ticketCount,setTicketCount] = useState(1);
+  const [ticketCount, setTicketCount] = useState(1);
   const navigate = useNavigate();
-  console.log(serviceId);
+
   useEffect(() => {
     const fetchServiceDetails = async () => {
-       
+      try {
         const response = await axios.get(`http://localhost:8000/services/${serviceId}`);
-        console.log(response.data)
-      setService(response.data);
+        console.log('Service Data:', response.data);
+        setService(response.data);
+      } catch (error) {
+        console.error("Error fetching service details", error);
+      }
     };
     fetchServiceDetails();
-  },[serviceId]);
+  }, [serviceId]);
 
   const increaseTicketCount = () => {
-    setTicketCount(prevCount => prevCount + 1);
+    setTicketCount((prevCount) => prevCount + 1);
   };
+
   const decreaseTicketCount = () => {
     if (ticketCount > 1) {
-      setTicketCount(prevCount => prevCount - 1);
+      setTicketCount((prevCount) => prevCount - 1);
     }
   };
 
- 
   const handleConfirmPay = () => {
-    alert(`You have purchased ${ticketCount} ticket(s) for ${service.location} at ${ticketCount*service.price} USD.`);
-    navigate('/services')
+    const price = parseFloat(service.price?.replace('$', '') || 0); 
+    alert(`You have purchased ${ticketCount} ticket(s) for ${service.location} at ${(ticketCount * price).toFixed(2)} USD.`);
+    navigate('/services');
   };
 
-  
   const handleCancel = () => {
     navigate('/services');
   };
@@ -43,6 +47,7 @@ function Bookservice() {
     return <p>Loading service details...</p>;
   }
 
+  const price = parseFloat(service.price?.replace('$', '') || 0);
   return (
     <div className="booking-container">
       <h2>Book Service: {service.location}</h2>
@@ -50,7 +55,7 @@ function Bookservice() {
         <img src={service.image} alt={service.location} className="booking-image" />
         <div className="booking-info">
           <p>{service.description}</p>
-          <p className="booking-price">Price per ticket:{service.price}USD</p>
+          <p className="booking-price">Price per ticket: {service.price || 'N/A'} USD</p> 
         </div>
       </div>
 
@@ -60,7 +65,7 @@ function Bookservice() {
         <button className="ticket-btn" onClick={increaseTicketCount}>+</button>
       </div>
 
-      <p className="total-price">Total: {ticketCount *service.price} USD</p>
+      <p className="total-price">Total: {(ticketCount * price).toFixed(2)} USD</p>
 
       <div className="booking-actions">
         <button className="confirm-button" onClick={handleConfirmPay}>Confirm Pay</button>

@@ -82,12 +82,12 @@ ul {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow around the image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
     transition: transform 0.3s ease;
 }
 
 .team-member img:hover {
-    transform: scale(1.1); /* Interactive hover effect on images */
+    transform: scale(1.1); 
 }
 
 .team-member h3 {
@@ -121,7 +121,7 @@ ul {
     width: 150px;
     height: 45px;
     border-radius: 5px;
-    background-color: #28a745; /* Bootstrap green color */
+    background-color: #28a745; 
     color: white;
     font-size: 16px;
     font-weight: bold;
@@ -134,10 +134,9 @@ ul {
 .submit11:hover {
     background-color: #218838;
     width: 160px;
-    height: 50px; /* Slight size increase on hover */
+    height: 50px; 
 }
 
-/* Responsive Design */
 @media screen and (max-width: 768px) {
     .container-about {
         padding: 20px;
@@ -149,7 +148,7 @@ ul {
     }
 
     .team-member {
-        flex: 1 1 calc(50% - 20px); /* 2 columns on smaller screens */
+        flex: 1 1 calc(50% - 20px);
     }
 
     .team-member img {
@@ -160,7 +159,7 @@ ul {
 
 @media screen and (max-width: 480px) {
     .team-member {
-        flex: 1 1 100%; /* Full width on small screens */
+        flex: 1 1 100%; 
     }
 
     .team-member img {
