@@ -79,14 +79,7 @@ function LoginPage() {
           <source src={backvideo} type="video/mp4" />
         </video>
         <div className='container'>
-          <div className='header'>
-            <div className='login-video1'>
-              <video width="400px" height="120px" autoPlay loop muted>
-                <source src={logo} type="video/mp4" />
-              </video>
-            </div>
-            <h1 className='video-h1'>Explora</h1>
-          </div>
+         
           <Link to='/'>
             <button className='btn1'><i class='bx bx-x'></i></button>
           </Link>
@@ -111,13 +104,17 @@ function LoginPage() {
           </div>
 
           <div className='submit-container'>
-            <Link to='/login'>
-              <button className='submit1 grey'>Sign Up</button>
+            <Link to='/'>
+              <button className='submit1 grey'>Cancel</button>
             </Link>
             <button className='submit' onClick={handleClick}>Login</button>
             <div className='back-home-btn'></div>
           </div>
+          <div className='already-member'>
+          <span>Don't have an Account?</span> <Link to='/login' className='link'>Sign Up</Link>
         </div>
+        </div>
+        
       </div>
     </div>
   );

@@ -1,0 +1,108 @@
+
+.otp-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #00b4db, #0083b0);
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .otp-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .otp-instructions {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    text-align: center;
+    opacity: 0.85;
+  }
+  
+  .otp-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .otp-input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .otp-input:focus {
+    outline: none;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .input-error {
+    border: 1px solid #ff6b6b;
+    background-color: #ffe0e0;
+  }
+  
+  .otp-error-message {
+    color: #ff6b6b;
+    font-size: 0.875rem;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .otp-submit-btn {
+    background-color: #00b4db;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .otp-submit-btn:hover {
+    background-color: #0083b0;
+  }
+  
+  .otp-submit-btn:active {
+    background-color: #007299;
+  }
+  
+  @media (max-width: 768px) {
+    .otp-heading {
+      font-size: 1.5rem;
+    }
+  
+    .otp-input,
+    .otp-submit-btn {
+      width: 90%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .otp-heading {
+      font-size: 1.2rem;
+    }
+  
+    .otp-input,
+    .otp-submit-btn {
+      font-size: 0.9rem;
+      padding: 10px;
+    }
+  }
+  

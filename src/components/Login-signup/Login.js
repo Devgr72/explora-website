@@ -12,7 +12,7 @@ function Login() {
   const [nameerror, setnameerror] = useState('');
   const [emailerror, setemailerror] = useState('');
   const [passerror, setpasserror] = useState('');
-  const [submitted, setSubmitted] = useState(false); 
+  const [submitted, setSubmitted] = useState(false);
   const navigate = useNavigate();
 
   function emailvalid(email) {
@@ -29,7 +29,7 @@ function Login() {
   }
 
   const validateFields = () => {
-   let valid = true;
+    let valid = true;
     if (!namevalid(name)) {
       setnameerror('Name cannot be empty');
       valid = false;
@@ -64,27 +64,23 @@ function Login() {
       setpass(value);
     }
   };
-  
 
   const handleClick = async () => {
     setSubmitted(true);
     if (validateFields()) {
       const data = { name, email, pass };
-      
+
       try {
-        axios.post('http://localhost:8000/sent-otp',{email});
+        axios.post('http://localhost:8000/sent-otp', { email });
         const response = await axios.post('http://localhost:8000/login', data);
         if (response.status === 200) {
-      
-          navigate('/verify-otp',{state:{mail:email}});
+          navigate('/verify-otp', { state: { mail: email } });
         }
       } catch (error) {
         console.error('Error during sign-up', error);
-       
       }
     }
   };
-  
 
   return (
     <div className='top'>
@@ -92,47 +88,39 @@ function Login() {
         <source src={backvideo} type="video/mp4" />
       </video>
       <div className='container'>
-        <div className='header'>
-          <div className='login-video1'>
-            <video width="400px" height="120px" autoPlay loop muted>
-              <source src={logo} type="video/mp4" />
-            </video>
-          </div>
-          <h1 className='video-h1'>Explora</h1>
-        </div>
-        <Link to='/'>
-          <button className='btn1'><i className='bx bx-x'></i></button>
-        </Link>
+      
 
         <div className='inputs'>
           <div className='input'>
             <i className="fas fa-user"></i>
-            <input type='text' name='name' placeholder='Name' onChange={handleChange} value={name} required/>
+            <input type='text' name='name' placeholder='Name' onChange={handleChange} value={name} required />
           </div>
           {submitted && <div className='login-error1'>{nameerror}</div>}
 
           <div className='input'>
             <i className="fas fa-envelope"></i>
-            <input type='email' name='email'  placeholder='Email id'  onChange={handleChange}  value={email}  required
-            />
+            <input type='email' name='email' placeholder='Email id' onChange={handleChange} value={email} required />
           </div>
           {submitted && <div className='login-error1'>{emailerror}</div>}
 
           <div className='input'>
             <i className='bx bxs-key'></i>
-            <input type='password' name='pass'  placeholder='Password'   onChange={handleChange}   value={pass}  required
-            />
+            <input type='password' name='pass' placeholder='Password' onChange={handleChange} value={pass} required />
           </div>
           {submitted && <div className='login-error1'>{passerror}</div>}
         </div>
 
         <div className='submit-container'>
-        <Link to='/verify-otp'>
           <button className='submit' onClick={handleClick}>Sign Up</button>
-          </Link>
-          <Link to='/loginpage'>
-            <button className='submit1 grey'>Login</button>
-          </Link>
+          <button className='submit1 grey' onClick={() => navigate('/')}>
+            Cancel
+          </button>
+        </div>
+
+        
+
+        <div className='already-member'>
+          <span>Already a member?</span> <Link to='/loginpage' className='link'>Login</Link>
         </div>
       </div>
     </div>
